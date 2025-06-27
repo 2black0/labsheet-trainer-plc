@@ -1,0 +1,17 @@
+- Format: Contoh format penulisan ada pada file `00.md`
+- Konteks Outline: Outline lengkap ada pada file `outline.md`
+- Sebagai referensi agar saling terkait konteksnya terdapat file `01.md` dan `02.md` yang sudah ditulis sebelumnya
+- Fokus Konten: Buat konten yang komprehensif untuk bagian yang ditentukan, sesuai dengan kerangka (outline) yang terdapat dalam file outline.md untuk menjaga kesinambungan dan struktur konteks
+- Struktur Tambahan: Jika diperlukan untuk memperjelas atau memperdalam materi, tambahkan sub-bagian (subsection) yang relevan.
+- Gaya Bahasa: Gunakan bahasa gaya akademis yang sesuai untuk buku referensi, namun hindari penggunaan istilah yang terlalu rumit atau sulit dipahami oleh pembaca awam.
+- Istilah Asing: Setiap istilah asing harus ditulis dalam format italic.
+- Format Teks: Tidak ada teks yang dicetak tebal (bold), kecuali pada judul (heading) yang formatnya sudah diatur secara otomatis oleh Markdown.
+- Saran Visual (Gambar):
+  - Sertakan saran penempatan gambar jika dapat memperkaya konten.
+  - Setiap gambar yang disarankan harus direferensikan atau disebutkan di dalam teks utama (misalnya, "seperti yang diilustrasikan pada Gambar 1").
+- Penyajian Data (Tabel):
+  - Gunakan tabel untuk menyajikan data, terutama untuk perbandingan atau klasifikasi agar lebih mudah dibaca.
+  - Setiap tabel yang dibuat harus direferensikan atau disebutkan di dalam teks utama (misalnya, "perbandingan lebih lanjut dapat dilihat pada Tabel 1").
+- Kode program ditulis dalam format kode yang sesuai tanpa ada komentar. setelah blok kode berikan penjelasan terkait kode tersebut.
+
+Berdasarkan pada petunjuk di atas, buatlah materi yang komprehensif untuk bab 5 yang nanti ditulis dalam file 05.md

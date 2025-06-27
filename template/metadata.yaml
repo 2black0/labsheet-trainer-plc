@@ -1,0 +1,69 @@
+---
+title: Dasar Sistem Kendali dan Implementasinya dengan Python
+subtitle: Simulasi dan Aplikasi Praktis dengan Jupyter Notebook, python-control dan Webots untuk Sistem Kendali PID
+author:
+- Ardy Seto Priambodo
+- Aris Nasuha
+- Oktaf Agni Dhewa
+- Ahmad Taufiq Musaddid
+subject: Sistem Kendali
+keywords:
+- python
+- sistem kendali
+- PID
+- python-control
+- simulasi
+- webots
+- teknik elektro
+- teknik elektronika
+lang: id
+book: true
+top-level-division: chapter
+chapters: true
+numbersections: true
+figPrefix:
+- Gambar
+- Gambar-gambar
+tblPrefix:
+- Tabel
+- Tabel-tabel
+figureTitle: Gambar
+tableTitle: Tabel
+linkReferences: true
+papersize: a5
+fontsize: 9pt
+geometry: left=2cm,right=1.5cm,top=2cm,bottom=1cm, includefoot
+classoption:
+- twoside
+titlepage: true
+titlepage-color: "F5F5F5"
+titlepage-text-color: "000000"
+titlepage-rule-color: "435488"
+titlepage-rule-height: 4
+watermark: Draft by ardyseto
+toc: true
+toc-title: Daftar Isi
+toc-depth: 3
+toc-own-page: true
+lof: false
+lot: false
+first-chapter: 1
+tables: true
+table-use-row-colors: true
+multirow: true
+float-placement-figure: H
+listings: true
+listings-disable-line-numbers: false
+listings-no-page-break: false
+pandoc-latex-environment:
+  noteblock: [ note ]
+  tipblock: [ tip ]
+  warningblock: [ warning ]
+  cautionblock: [ caution ]
+  importantblock: [ important ]
+header-includes:
+- |
+  ```{=latex}
+  \usepackage{awesomebox}
+  ```
+...
