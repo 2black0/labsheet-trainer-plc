@@ -1,21 +1,14 @@
 ---
-title: Dasar Sistem Kendali dan Implementasinya dengan Python
-subtitle: Simulasi dan Aplikasi Praktis dengan Jupyter Notebook, python-control dan Webots untuk Sistem Kendali PID
+title: Labsheet Praktik PLC
+subtitle: Belajar PLC dengan mudah dengan Trainer PLC Omron
 author:
 - Ardy Seto Priambodo
 - Aris Nasuha
-- Oktaf Agni Dhewa
-- Ahmad Taufiq Musaddid
+- Yusril Ali Riza Pratama
 subject: Sistem Kendali
 keywords:
-- python
-- sistem kendali
-- PID
-- python-control
-- simulasi
-- webots
-- teknik elektro
-- teknik elektronika
+- PLC
+- Omron
 lang: id
 book: true
 top-level-division: chapter
@@ -30,8 +23,8 @@ tblPrefix:
 figureTitle: Gambar
 tableTitle: Tabel
 linkReferences: true
-papersize: a5
-fontsize: 9pt
+papersize: a4
+fontsize: 12pt
 geometry: left=2cm,right=1.5cm,top=2cm,bottom=1cm, includefoot
 classoption:
 - twoside

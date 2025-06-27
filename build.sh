@@ -15,7 +15,7 @@ EMOJI_CLEAN='🧹'; EMOJI_DONE='🎉'; EMOJI_ERR='❌'
 TEMPLATE="template/eisvogel.latex"
 METAFILE="template/metadata.yaml"
 
-OUTPUT_PDF="book.pdf"
+OUTPUT_PDF="labsheet.pdf"
 TMP_MD="temp_markdown.md"
 MD_FILES=()
 
@@ -23,9 +23,9 @@ MD_FILES=()
 # 1. Tentukan berkas sumber
 ###############################################################################
 if [[ $# -eq 0 ]]; then
-  echo -e "${EMOJI_FIND}  Mengumpulkan semua *.md di src/ (urut alami)…"
+  echo -e "${EMOJI_FIND}  Mengumpulkan semua *.md di src/ (hanya root, urut alami)…"
   while IFS= read -r f; do MD_FILES+=("$f"); done < \
-    <(find src -type f -name '*.md' | sort -V)
+    <(find src -maxdepth 1 -type f -name '*.md' | sort -V)
 else
   echo -e "${EMOJI_FIND}  Mengumpulkan berkas sesuai argumen…"
   for arg in "$@"; do
@@ -34,7 +34,7 @@ else
     elif [[ -f "src/$arg" ]]; then
       MD_FILES+=("src/$arg")
     else
-      FOUND=$(find src -type f -name "$arg" | head -n1)
+      FOUND=$(find src -maxdepth 1 -type f -name "$arg" | head -n1)
       if [[ -z "$FOUND" ]]; then
         echo -e "${EMOJI_ERR}  Berkas “$arg” tidak ditemukan."; exit 1
       fi
@@ -71,7 +71,7 @@ pandoc "$TMP_MD" \
   --pdf-engine=xelatex \
   --top-level-division=chapter \
   --number-sections \
-  --resource-path=".:src" \
+  --resource-path=".:src:src/image:src/*/image" \
   --listings \
   -F pandoc-crossref \
   --citeproc
