@@ -20,6 +20,42 @@ TMP_MD="temp_markdown.md"
 MD_FILES=()
 
 ###############################################################################
+# 0. Cek kebutuhan tool utama
+###############################################################################
+TOOLS=(
+  "pandoc"
+  "xelatex"
+  "pandoc-crossref"
+)
+
+PANDOC_VERSION=$(pandoc --version | head -n1 | awk '{print $2}')
+PANDOC_MAJOR=$(echo "$PANDOC_VERSION" | cut -d. -f1)
+PANDOC_MINOR=$(echo "$PANDOC_VERSION" | cut -d. -f2)
+
+for tool in "${TOOLS[@]}"; do
+  if command -v "$tool" >/dev/null 2>&1; then
+    echo "[OK] $tool ditemukan: $($tool --version | head -n1)"
+  else
+    echo "${EMOJI_ERR}  $tool tidak ditemukan! Harap install terlebih dahulu."
+    exit 1
+  fi
+done
+
+# Cek citeproc hanya jika pandoc < 2.11
+if (( PANDOC_MAJOR < 2 )) || { (( PANDOC_MAJOR == 2 )) && (( PANDOC_MINOR < 11 )); }; then
+  if command -v pandoc-citeproc >/dev/null 2>&1; then
+    echo "[OK] pandoc-citeproc ditemukan: $(pandoc-citeproc --version | head -n1)"
+  elif command -v citeproc >/dev/null 2>&1; then
+    echo "[OK] citeproc ditemukan: $(citeproc --version | head -n1) (pengganti pandoc-citeproc)"
+  else
+    echo "${EMOJI_ERR}  pandoc-citeproc & citeproc tidak ditemukan! Harap install salah satu."
+    exit 1
+  fi
+else
+  echo "[INFO] Citation processor sudah terintegrasi di Pandoc >= 2.11 (versi: $PANDOC_VERSION)"
+fi
+
+###############################################################################
 # 1. Tentukan berkas sumber
 ###############################################################################
 if [[ $# -eq 0 ]]; then
