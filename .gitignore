@@ -1,0 +1,34 @@
+# LaTeX & Pandoc build artifacts
+temp_markdown.md
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.run.xml
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Windows build
+filelist.txt
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Misc
+node_modules/
+.env
